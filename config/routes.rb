@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   get  '/about',   to: 'static_pages#about'
   get  '/review', to: 'static_pages#review'
   get  '/signup', to: 'users#new'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
   resources :users
 end

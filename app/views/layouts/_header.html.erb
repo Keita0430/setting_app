@@ -3,12 +3,18 @@
     <%= link_to "デキ婚斡旋サイト", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "ログイン",   '#' %></li>
+        
         <li><%= link_to "ホーム",   root_path %></li>
         <li><%= link_to "お相手検索",   '#' %></li>
-        <li><%= link_to "チャット",   '#' %></li>
-        <li><%= link_to "マイページ", '#' %></li>
-        <li><%= link_to "ログアウト",   '#' %></li>
+        <% if logged_in? %>
+          <li><%= link_to "チャット", '#' %></li>
+          <li><%= link_to "マイページ", current_user %></li>
+          <li>
+            <%= link_to "Log out", logout_path, method: :delete %>
+          </li>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
