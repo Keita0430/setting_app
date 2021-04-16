@@ -7,7 +7,7 @@
         <li><%= link_to "ホーム",   root_path %></li>
         <li><%= link_to "お相手検索",   '#' %></li>
         <% if logged_in? %>
-          <li><%= link_to "チャット", '#' %></li>
+          <li><%= link_to "チャット", rooms_path %></li>
           <li><%= link_to "マイページ", current_user %></li>
           <li><%= link_to "個人情報の編集", edit_user_path(current_user) %></li>
           <li>

@@ -15,3 +15,13 @@ User.create!(name:  "Example User",
                password:              password,
                password_confirmation: password)
 end
+
+20.times do |n|
+  UserRoom.create!(user_id: n,
+                   room_id: n)
+end
+
+20.times do |n|
+  UserRoom.create!(user_id: 20+n,
+                   room_id: n)
+end

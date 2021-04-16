@@ -194,6 +194,18 @@ input {
 }
 
 
+/* Rooms index */
+
+.rooms {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
 /* 自分で追加 */
 .setting-image {
   text-align: center;

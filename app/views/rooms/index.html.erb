@@ -1,0 +1,16 @@
+<% if @rooms.any? %>
+  <h1>チャット相手</h1>
+
+  <ul class="rooms">
+  <% @rooms.each do |room| %>
+    <li>
+    <% room.users.each do |pair| %>
+      <% if pair.id != current_user.id %>
+          <h3><%= link_to pair.name, '#' %></h3>
+      <% end %>
+    <% end %>
+    </li>
+  <% end %>
+  </ul>
+
+<% end %>
