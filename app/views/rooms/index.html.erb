@@ -6,7 +6,7 @@
     <li>
     <% room.users.each do |pair| %>
       <% if pair.id != current_user.id %>
-          <h3><%= link_to pair.name, '#' %></h3>
+          <h3><%= link_to pair.name, room_path(room) %></h3> 
       <% end %>
     <% end %>
     </li>
@@ -14,3 +14,5 @@
   </ul>
 
 <% end %>
+
+<!--名前をクリックしたら、チャットルームに繋げる。room_path(room)-->

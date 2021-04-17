@@ -2,10 +2,27 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
+  before_action :current_user,   only: :show
   
   def show
+    # before_actionを通すことで、showアクションとビューで@current_user変数が使える。
     @user = User.find(params[:id])
+    rooms= @current_user.user_rooms.pluck(:room_id)
+    user_rooms = UserRoom.find_by(user_id: @user.id, room_id: rooms)
+
+    unless user_rooms.nil?
+      @room = user_rooms.room
+      if @room.messages.any?
+        @messages = @room.messages.includes(:user).order(:id).last(100)
+      end
+    else
+      @room = Room.new
+      @room.save
+      UserRoom.create(user_id: @current_user.id, room_id: @room.id)
+      UserRoom.create(user_id: @user.id, room_id: @room.id)
+    end
   end
+    
   
   def new
     @user = User.new

@@ -9,7 +9,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     log_in_as(@admin)
     get user_path(@non_admin)
     assert_template 'users/show'
-    assert_select 'a[href=?]', user_path(@non_admin), text: 'delete'
+    assert_select 'a[href=?]', user_path(@non_admin), text: '削除'
     assert_difference 'User.count', -1 do
       delete user_path(@non_admin)
     end

@@ -5,8 +5,11 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <% if current_user != @user %>
+          <%= link_to "チャット", room_path(@room) %>
+        <% end %>
         <% if current_user.admin? && !current_user?(@user) %>
-          | <%= link_to "delete", @user, method: :delete,
+          | <%= link_to "削除", @user, method: :delete,
                                         data: { confirm: "You sure?" } %>
         <% end %>
       </h1>
