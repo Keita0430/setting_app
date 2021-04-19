@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'rooms/index'
-  get 'rooms/new'
-  get 'rooms/create'
-  get 'users/new'
+  mount ActionCable.server => "/cable"
   root 'static_pages#home'
   get  '/help',    to: 'static_pages#help'
   get  '/about',   to: 'static_pages#about'
@@ -11,6 +8,11 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  
   resources :users
-  resources :rooms, only: [:index, :show, :create]
+  
+  resources :rooms, only: [:index, :show] do
+   resources :messages, only: [:create]
+  end
+  
 end
