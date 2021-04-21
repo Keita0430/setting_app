@@ -214,11 +214,18 @@ input {
 }
 
 // メッセージ投稿フォーム
-footer {
+.message-footer {
   max-width: 768px;
   padding: 1rem;
   margin: 0 auto;
   background-color: white;
+}
+
+// メッセージの送信ボタン無効化時のスタイル
+.btn-primary.disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  cursor: auto;
 }
 
 /* 自分で追加 */
