@@ -13,6 +13,7 @@ class RoomsController < ApplicationController
     if UserRoom.where(user_id: @current_user.id, room_id: @room.id).present?
       @messages = @room.messages.includes(:user).order(:id)
       @message = @current_user.messages.build
+      # @message_by_other = Message.find_by(room_id: @room_id, user_id: !@current_user.id)
     else
       redirect_back(fallback_location: root_path)
     end

@@ -1,4 +1,21 @@
 <div id="message-container">
-  <%= render @messages %>
+  <% @messages.each do |message| %>
+    <% if message.user_id == @current_user.id %>
+      <div class = "mycomment">
+        <p><%= simple_format(h message.content) %></p>
+      </div>
+    <% else %>
+      <div class = "fukidasi">
+        <div class ="faceicon">
+          <img src="/assets/profile.png" >
+        </div>
+        <div class = "chatting">
+          <div class = "says">
+            <p><%= simple_format(h message.content) %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 <%= render 'footer' %>
