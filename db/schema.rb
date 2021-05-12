@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_07_051158) do
+ActiveRecord::Schema.define(version: 2021_05_12_091244) do
 
   create_table "boards", force: :cascade do |t|
     t.string "district_name"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2021_05_07_051158) do
     t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin", default: false
+    t.integer "gender"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
