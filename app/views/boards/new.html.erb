@@ -1,0 +1,13 @@
+<% provide(:title, '掲示板の追加') %>
+<h1>掲示板の追加</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @board, local: true) do |f| %>
+      <%= f.label :district_name, '地区名を設定する'%>
+      <%= f.text_field :district_name %>
+
+　　　<%= f.submit "掲示板の追加", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

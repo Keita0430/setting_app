@@ -11,8 +11,13 @@ Rails.application.routes.draw do
   
   resources :users
   
+  resources :boards, only: [:index, :show, :new, :create] do
+    resources :posts, only: [:create]
+  end
+  
   resources :rooms, only: [:index, :show] do
    resources :messages, only: [:create]
   end
+  
   
 end

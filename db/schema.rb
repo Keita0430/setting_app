@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_165141) do
+ActiveRecord::Schema.define(version: 2021_05_07_051158) do
+
+  create_table "boards", force: :cascade do |t|
+    t.string "district_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "messages", force: :cascade do |t|
     t.integer "user_id"
@@ -18,6 +24,16 @@ ActiveRecord::Schema.define(version: 2021_04_12_165141) do
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "board_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "content"
+    t.index ["board_id"], name: "index_posts_on_board_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -43,4 +59,6 @@ ActiveRecord::Schema.define(version: 2021_04_12_165141) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "posts", "boards"
+  add_foreign_key "posts", "users"
 end
