@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :users
   
   resources :boards, only: [:index, :show, :new, :create] do
-    resources :posts, only: [:create]
+    resources :posts, only: [:new, :create]
   end
   
   resources :rooms, only: [:index, :show] do

@@ -1,0 +1,11 @@
+<% provide(:title, "新規投稿") %>
+<h1>新規投稿</h1>
+
+<%= form_with(model: [@board, @post], local: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= hidden_field_tag :id, @board.id %>
+    <%= f.text_area :content, placeholder: "新規投稿を作成する..." %>
+  </div>
+  <%= f.submit "投稿する", class: "btn btn-primary" %>
+<% end %>

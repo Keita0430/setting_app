@@ -22,7 +22,7 @@ class BoardsController < ApplicationController
   
   def show
     @board = Board.find(params[:id])
-    @post = @current_user.posts.build
+    # @post = @current_user.posts.build
     @posts = @board.posts.includes(:user)
     # .paginate(page: params[:page])
   end
