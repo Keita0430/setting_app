@@ -5,11 +5,11 @@
       <ul class="nav navbar-nav navbar-right">
         
         <li><%= link_to "ホーム",   root_path %></li>
-        <li><%= link_to "お相手検索",   '#' %></li>
         <% if logged_in? %>
           <li><%= link_to "掲示板", boards_path %></li>
           <li><%= link_to "チャット", rooms_path %></li>
           <li><%= link_to "マイページ", current_user %></li>
+          <li><%= link_to "プロフィールの編集",  {controller: "users", action: "edit", id: current_user.id, name: "profile"} %></li>
           <li><%= link_to "個人情報の編集", edit_user_path(current_user) %></li>
           <li>
             <%= link_to "ログアウト", logout_path, method: :delete %>

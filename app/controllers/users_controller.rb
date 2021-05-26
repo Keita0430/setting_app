@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
-  before_action :current_user,   only: :show
+  before_action :current_user, only: :show
   
   def show
     # before_actionを通すことで、showアクションとビューで@current_user変数が使える。
@@ -41,6 +41,12 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
+    
+    if request.path == edit_user_path(@user)
+      render "users/edit"
+    else
+      render "users/#{params[:name]}"
+    end
   end
   
   def update
