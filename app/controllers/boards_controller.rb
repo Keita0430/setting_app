@@ -4,6 +4,18 @@ class BoardsController < ApplicationController
   
   def index
     @boards = Board.all
+    
+    if request.fullpath == "/boards/option/select"
+      render "boards/option"
+    elsif request.path == boards_path
+      render "boards/index"
+    elsif request.fullpath == "/boards/option/index2"
+      render "boards/index2"
+    elsif request.fullpath == "/boards/option/index3"
+      render "boards/index3"
+    else
+      render "boards/index4"
+    end
   end
   
   def new
