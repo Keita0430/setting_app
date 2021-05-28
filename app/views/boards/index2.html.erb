@@ -1,1 +1,14 @@
-<h1>index2</h1>
+<% provide(:title, 'お相手を探す') %>
+<h1>2:2でお会いする相手を探そう！</h1>
+
+<% if @current_user.admin? %>
+  <li><%= link_to "掲示板の追加", new_board_path %></li>
+<% end %>
+
+<ul class="boards">
+  <% @boards2.each do |board| %>
+    <li>
+      <%= link_to board.district_name, board_path(board) %> <%= board.id %>
+    </li>
+  <% end %>
+</ul>

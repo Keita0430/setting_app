@@ -4,6 +4,10 @@ class BoardsController < ApplicationController
   
   def index
     @boards = Board.all
+    @boards1 = @boards[0..5]
+    @boards2 = @boards[6..11]
+    @boards3 = @boards[12..17]
+    @boards4 = @boards[18..23]
     
     if request.fullpath == "/boards/option/select"
       render "boards/option"
