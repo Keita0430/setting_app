@@ -1,9 +1,11 @@
 <% provide(:title, 'お相手を探す') %>
-<h1>お相手を探す</h1>
+<h1>～お相手を探す～</h1>
 
-<ul class= "option">
-  <li><%= link_to "1:1", boards_path %></li>
-  <li><%= link_to "2:2", {controller: "boards", action: "index", name: "index2"} %></li>
-  <li><%= link_to "3:3", {controller: "boards", action: "index", name: "index3"} %></li>
-  <li><%= link_to "4:4", {controller: "boards", action: "index", name: "index4"} %></li>
-</ul>
+<div class= "test">
+  <div class= "option-container">
+      <%= link_to "1:1", boards_path, class: "option-1" %>
+      <%= link_to "2:2", {controller: "boards", action: "index", name: "index2"}, class: "option-2" %>
+      <%= link_to "3:3", {controller: "boards", action: "index", name: "index3"}, class: "option-3" %>
+      <%= link_to "4:4", {controller: "boards", action: "index", name: "index4"}, class: "option-4" %>
+  </div>
+</div>

@@ -358,3 +358,30 @@ span.image {
 .setting-image {
   text-align: center;
 }
+
+.option-container{
+  display: flex;
+}
+
+.option-container > a{
+  margin: 10px;
+  width: 25%;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.option-1{
+  background: #FFFFCC;
+}
+
+.option-2{
+  background: #CCFFFF;
+}
+
+.option-3{
+  background: #CCFFCC;
+}
+
+.option-4{
+  background: #FFCCCC;
+}
