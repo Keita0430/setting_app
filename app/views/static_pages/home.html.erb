@@ -1,40 +1,54 @@
-<div class="center jumbotron">
-  <h1>デキ婚斡旋サイト</h1>
+<section class="swiper-container loading">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLbVhsNzdIYmlfN1E)">
+      <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img" />
+      <div class="content">
+        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Shaun Matthews</p>
+        <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+      </div>
+    </div>
+    <div class="swiper-slide" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
+      <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img" />
+      <div class="content">
+        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Alexis Berry</p>
+        <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+      </div>
+    </div>
+    <div class="swiper-slide" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s)">
+      <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img" />
+      <div class="content">
+        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Billie Pierce</p>
+        <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+      </div>
+    </div>
+    <div class="swiper-slide" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLVUpEems2ZXpHYVk)">
+      <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLVUpEems2ZXpHYVk" class="entity-img" />
+      <div class="content">
+        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Trevor Copeland</p>
+        <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+      </div>
+    </div>
+    <div class="swiper-slide" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLNXBIcEdOUFVIWmM)">
+      <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLNXBIcEdOUFVIWmM" class="entity-img" />
+      <div class="content">
+        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Bernadette Newman</p>
+        <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+      </div>
+    </div>
+  </div>
   
-  <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev swiper-button-white"></div>
+  <div class="swiper-button-next swiper-button-white"></div>
+</section>
+
+<div class="signup_btn">
+  <%= link_to "新規登録", signup_path, class: "btn btn-malformation btn-malformation--pastel" %>
 </div>
 
-<div id="sampleCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-	<ol class="carousel-indicators">
-		<li class="active" data-target="#sampleCarousel" data-slide-to="0"></li>
-		<li data-target="#sampleCarousel" data-slide-to="1"></li>
-		<li data-target="#sampleCarousel" data-slide-to="2"></li>
-	</ol>
-	<div class="carousel-inner" role="listbox">
-		<div class="item active">
-			<%= link_to image_tag("home2.jpg", alt: "Rails logo", width: "100%"),
-                      "https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqGwMrA48iPMRXN_Yqjcz2f6lpqEdSQLenp3O4suwyhE8ZddtrnLBqUTDFx2qpz8tm0BY8ePza1Z6O-juEHCX8j2mQM8By9pMw_IqhfOJCa5Eko0hDJAVP1md5a9QZlPfeHPN3ZgqgHfWPk3PFi8TYjibESuWtMe8Oe9jo8jPckfXmsYkFz_KZN99rSJ2cTbIIufMT4bzjmvGKJENIfRZBbCZVU9RCBXOK3cQXGMVVYw-916BGCzlskQGYBMda5iU6dYNk1FqJ9eE0Kz8G6BZUDmg=/20160212141406-2.jpg?errorImage=false" %>
-		</div>
-		<div class="item">
-			<%= link_to image_tag("home1.jpg", alt: "Rails logo", width: "100%"),
-                      "app/assets/images/home1.jpg -OL https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG4eeynLEzF4K7IheFrKqlXnmryEkwyjV_zXc6Y8BIjnnSngbkTfSySfYql14LWGzqW6peRCBbm3XcUJ7Ll7OVYbxekkVSLCfzW8WIi7__njJh57KcsTMXgrsiF4WsqqVeeavISTDKNX_NdzpjwEiOedKeBuRN9LJJ9iqXXgtYbOpbql5EIFubddxQnsuXs5VhoNk1FqJ9eE0Kz8G6BZUDmg=/20200929.jpg?errorImage=false " %>
-		</div>
-		<div class="item">
-		    <%= link_to image_tag("home1.jpg", alt: "Rails logo", width: "100%"),
-                      "app/assets/images/home1.jpg -OL https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG4eeynLEzF4K7IheFrKqlXnmryEkwyjV_zXc6Y8BIjnnSngbkTfSySfYql14LWGzqW6peRCBbm3XcUJ7Ll7OVYbxekkVSLCfzW8WIi7__njJh57KcsTMXgrsiF4WsqqVeeavISTDKNX_NdzpjwEiOedKeBuRN9LJJ9iqXXgtYbOpbql5EIFubddxQnsuXs5VhoNk1FqJ9eE0Kz8G6BZUDmg=/20200929.jpg?errorImage=false " %>
-		</div>
-	</div>
-	<a class="left carousel-control" href="#sampleCarousel" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		<span class="sr-only">前へ</span>
-	</a>
-	<a class="right carousel-control" href="#sampleCarousel" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		<span class="sr-only">次へ</span>
-	</a>
-</div>
-
-<div class="setting-image">
- <%= link_to image_tag("setting.jpg", alt: "Rails logo", width: "400px"),
-                      "https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG8Zl2TWmiBgBcQeH5J-xv2qfdhHmAF8Pfacdn45skpEb1v_qwY45IrwDE2Sfrs1JWOHc-yw8m9TY1ggPH2FKpOpYWyTN_WwbzB-DdnCA6Wc5WtiL9LUo4nRk8W_bGzK9ye28SnMOerjDmTYg34zCsoHYCFf9m-1Biu7lyqxs1EvffoVnFcEJyZb9aKiLWhxuDMGxeci2OVzpuNK1gfac9Yk0zKt7lFSJE1dY-1EYQ3cpdnx-OTCaHFfgvGtfqgT4_YJNIupbZnAWJjZnhuRzh-xNALZLbybqNck9n4U-BQe0j7g1yvU-Ke8W2c-r4ZscnkX1SAS0NrJuAy8xmBuXXr6TUuSMI1YtRGPwiWHX9nugPx2u_mLhW88ziCAqCjAOog==/86e61a05-489a-43a3-b33d-3790458f9162.jpg?errorImage=false" %>
-</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<%# swiperのjs読み込み %>
+<%= javascript_pack_tag "swiper" %>
