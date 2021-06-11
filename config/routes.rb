@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'articles/index'
+  get 'articles/new'
+  get 'articles/show'
   mount ActionCable.server => "/cable"
   root 'static_pages#home'
   get  '/help',    to: 'static_pages#help'
@@ -8,6 +11,8 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  
+  resources :articles, only: [:index, :show, :new, :create, :destroy]
   
   resources :users
   get 'users/:id/edit/:name', controller: 'users', action: 'edit'

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails',      '6.0.3'
+gem 'carrierwave', '~> 2.0'
 gem 'bcrypt',     '3.1.13'
 gem 'faker',      '2.1.2' #サンプルデータを生成するgem
 gem 'will_paginate',           '3.1.8'

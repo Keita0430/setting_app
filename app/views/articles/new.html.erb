@@ -1,0 +1,19 @@
+<% provide(:title, "コンテンツ追加") %>
+<h1>お役立ちコンテンツの追加</h1>
+
+<%= form_with(model: @article, local: true) do |f| %>
+    
+    <%= f.label :title, "タイトルを入力してください" %>
+    <%= f.text_area :title %>
+    
+    <%= f.label :description, "小見出しを入力してください" %>
+    <%= f.text_area :description %>
+  
+    <%= f.label :content, "記事を入力してください" %>
+    <%= f.text_area :content %>
+    
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+    
+    <%= f.submit "投稿する", class: "btn btn-primary" %>
+<% end %>

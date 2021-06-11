@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_12_091244) do
+ActiveRecord::Schema.define(version: 2021_06_11_130045) do
+
+  create_table "articles", force: :cascade do |t|
+    t.text "content"
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "avatar"
+    t.string "description"
+  end
 
   create_table "boards", force: :cascade do |t|
     t.string "district_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "information", force: :cascade do |t|
+    t.text "content"
+    t.string "title"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -32,8 +49,18 @@ ActiveRecord::Schema.define(version: 2021_05_12_091244) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "content"
+    t.string "gender_id"
     t.index ["board_id"], name: "index_posts_on_board_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "created_at"], name: "index_reviews_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -57,9 +84,11 @@ ActiveRecord::Schema.define(version: 2021_05_12_091244) do
     t.string "remember_digest"
     t.boolean "admin", default: false
     t.integer "gender"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "posts", "boards"
   add_foreign_key "posts", "users"
+  add_foreign_key "reviews", "users"
 end

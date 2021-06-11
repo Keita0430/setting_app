@@ -95,9 +95,23 @@
 					</div>
 				</li>
 			</ul>
-		</div>
-　
-</div>
+	</div>
+	
+	<div class="index-content">
+   <div class="container">
+    <h2>合コンで使えるお役立ち情報</h2>
+    <% @articles.first(3).each do |article| %>
+      <div class="col-lg-4 card-box">
+        <div class="card"> <%= image_tag article.avatar.url %>
+          <h4><%= article.title %></h4>
+          <p><%= article.description %></p> <%= link_to "詳細へ", article_path(article), class: "blue-button"%>
+        </div>
+      </div>
+    <% end %>
+   </div>
+  </div>
+		
+	
 
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -1,0 +1,17 @@
+<div class="container">
+　<% provide(:title, '合コンで使えるお役立ち情報') %>
+　<h1>合コンで使えるお役立ち情報</h1>
+　
+  <div class="index-content">
+   <div class="container">
+    <% @articles.each do |article| %>
+      <div class="col-lg-4">
+        <div class="card"> <%= image_tag article.avatar.url %>
+          <h4><%= article.title %></h4>
+          <p><%= article.description %></p> <%= link_to "詳細へ", article_path(article), class: "blue-button"%>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+

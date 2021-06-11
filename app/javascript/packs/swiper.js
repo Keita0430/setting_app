@@ -3,12 +3,13 @@
 var sliderSelector = '.swiper-container',
     options = {
       init: false,
+      autoplay: 2000,
       loop: true,
       speed: 800,
       slidesPerView: 2, // or 'auto'
       // spaceBetween: 10,
       centeredSlides : true,
-      effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+      effect: 'fade', // 'cube', 'fade', 'coverflow',
       coverflowEffect: {
         rotate: 50, // Slide rotate in degrees
         stretch: 0, // Stretch space between slides (in px)
@@ -28,7 +29,7 @@ var sliderSelector = '.swiper-container',
       },
       breakpoints: {
         1023: {
-          slidesPerView: 1.5,
+          slidesPerView: 1,
           spaceBetween: 0
         }
       },
