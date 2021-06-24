@@ -1,8 +1,43 @@
-<li id="post-<%= post.id %>">
-  <%= link_to gravatar_for(post.user, size: 50), post.user %>
-  <span class="user"><%= link_to post.user.name, post.user %></span>
-  <span class="content"><%= post.content %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(post.created_at) %> ago.
-  </span>
-</li>
+<div class="pbody">
+    <div class="post-user-info">
+        <div class="post-avatar-img">
+          <% if @post.user.avatar? %>
+        　　<%= image_tag @post.user.avatar.url %>
+          <% end %>
+        </div>
+        <%= link_to @post.user.name, user_path(@post.user) %>
+　　</div>
+　　
+　　<table class="postable">
+        <tbody>
+            <tr>
+                <th>業種</th>
+                <td data-label="内容" class="txt"><%= post.industry %></td>
+            </tr>
+            <tr>
+                <th>学歴</th>
+                <td data-label="内容" class="txt"><%= post.eb %></td>
+            </tr>
+            <tr>
+                <th>希望する曜日</th>
+                <td data-label="内容" class="txt"><%= post.day%></td>
+            </tr>
+            <tr>
+                <th>希望する場所</th>
+                <td data-label="内容" class="txt"><%= post.place %></td>
+            </tr>
+            <tr>
+                <th>お相手の条件</th>
+                <td data-label="内容" class="txt"><%= post.conditions %></td>
+            </tr>
+            <tr>
+                <th>NGなこと</th>
+                <td data-label="内容" class="txt"><%= post.ng%></td>
+            </tr>
+            <tr>
+                <th>自己PR</th>
+                <td data-label="内容" class="txt"><%= post.self_pr %></td>
+            </tr>
+        </tbody>
+　　</table>
+</div>

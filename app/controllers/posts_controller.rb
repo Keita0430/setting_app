@@ -19,15 +19,15 @@ class PostsController < ApplicationController
     end
   end
   
-  def show
-  end
-  
   def destroy
+      Post.find(params[:id]).destroy
+      flash[:success] = "投稿を削除しました"
+      redirect_back(fallback_location: root_path)
   end
   
   private
   
     def post_params
-      params.require(:post).permit(:content).merge(board_id: @board.id)
+      params.require(:post).permit(:industry, :eb, :day, :place, :conditions, :ng, :self_pr).merge(board_id: @board.id)
     end
 end

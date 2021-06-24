@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_11_130045) do
+ActiveRecord::Schema.define(version: 2021_06_17_084043) do
 
   create_table "articles", force: :cascade do |t|
     t.text "content"
@@ -50,6 +50,13 @@ ActiveRecord::Schema.define(version: 2021_06_11_130045) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "content"
     t.string "gender_id"
+    t.string "industry"
+    t.string "eb"
+    t.string "day"
+    t.string "place"
+    t.string "conditions"
+    t.string "ng"
+    t.string "self_pr"
     t.index ["board_id"], name: "index_posts_on_board_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end

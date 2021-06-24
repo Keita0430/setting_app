@@ -45,9 +45,10 @@
   　<div class="swiper-button-next swiper-button-white"></div>
 　</section>
 　
+　
 　<div class= "home-btn">
 　　<div class="signup_btn">
-  　　<%= link_to "新規登録", signup_path, class: "btn btn-malformation btn-malformation--pastel" %>
+  　　<%= link_to "新規登録", signup_path, class: "btn btn-c" %>
 　　</div>
 
 　　<div class="signup_btn">
@@ -56,7 +57,7 @@
 　</div>
 　
 　<div class="service-block">
-			<h2>Cheers!の2つのメインサービス</h2>
+			<h2 class = "homeh2">Cheers!の2つのメインサービス</h2>
 			<ul class="service-about">
 				<li>
 					<div class="service-about-box">
@@ -84,7 +85,7 @@
 							<h3><span class="service-about-number">②</span>1対1でお相手を探せる</span></h3>
 						</div>
 						<p>2人で落ち着いて話せる!</p>
-						<table class="service-about-price">
+						<table class="optional">
 							<tr>
 								<th colspan="2">お相手を探す</th>
 							</tr>
@@ -99,7 +100,7 @@
 	
 	<div class="index-content">
    <div class="container">
-    <h2>合コンで使えるお役立ち情報</h2>
+    <h2 class="homeh2">合コンで使えるお役立ち情報</h2>
     <% @articles.first(3).each do |article| %>
       <div class="col-lg-4 card-box">
         <div class="card"> <%= image_tag article.avatar.url %>

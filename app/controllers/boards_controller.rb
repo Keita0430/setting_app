@@ -41,6 +41,7 @@ class BoardsController < ApplicationController
     # @post = @current_user.posts.build
     @posts = @board.posts.includes(:user)
     # .paginate(page: params[:page])
+    @post = Post.find(params[:id])
   end
   
   # def destroy
