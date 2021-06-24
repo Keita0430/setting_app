@@ -43,14 +43,11 @@
     <%= f.label :alcohol, "お酒" %>
     <%= f.select :alcohol, [["よく飲む", "よく飲む"], ["時々飲む", "時々飲む"], ["あまり飲まない", "あまり飲まない"], ["全く飲まない", "全く飲まない"]], include_blank: "選択して下さい" %>
     
-    <%= f.label :tobacco, "煙草" %>
-    <%= f.select :tobacco, [["吸わない", "吸わない"], ["吸う", "吸う"], ["吸う(電子タバコ)", "吸う(電子タバコ)"], ["ときどき吸う", "ときどき吸う"], ["非喫煙者の前では吸わない", "非喫煙者の前では吸わない"], ["相手が嫌ならやめる", "相手が嫌ならやめる"]], include_blank: "選択して下さい" %>
+    <%= f.label :tabacco, "煙草" %>
+    <%= f.select :tabacco, [["吸わない", "吸わない"], ["吸う", "吸う"], ["吸う(電子タバコ)", "吸う(電子タバコ)"], ["ときどき吸う", "ときどき吸う"], ["非喫煙者の前では吸わない", "非喫煙者の前では吸わない"], ["相手が嫌ならやめる", "相手が嫌ならやめる"]], include_blank: "選択して下さい" %>
     
-    <%= f.label :ng, "NGなこと" %>
-    <%= f.text_area :ng, placeholder: "NGなことはありますか？" %>
-    
-    <%= f.label :pr, "PR" %>
-    <%= f.text_area :pr, placeholder: "PRを書こう！" %>
+    <%= f.label :self_pr, "PR" %>
+    <%= f.text_area :self_pr, placeholder: "PRを書こう！" %>
   </div>
   <%= f.submit "投稿する", class: "btn btn-primary" %>
 <% end %>

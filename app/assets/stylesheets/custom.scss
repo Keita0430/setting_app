@@ -560,6 +560,7 @@ input {
   border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
   background-position: center center;  /* 横長画像の左上を基準に表示 */
   display: inline-block;
+  object-fit: cover;
 }
 
 table.postable {
@@ -673,11 +674,69 @@ table.optional th {
   background-color: #F5DEB3;
 }
 
-.profile-avatar-img img {
-  width:  150px;       /* ※縦横を同値に */
-  height: 150px;       /* ※縦横を同値に */
-  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-  background-position: center center;  /* 横長画像の左上を基準に表示 */
-  display: inline-block;
-  
+// マイページデザイン
+.user-info {
+  padding-bottom: 15px;
+}
+
+.user-info > p {
+  font-family: sans-serif;
+  font-size: 15px;
+  width: 60%;
+  text-align: center;
+}
+
+.profile-img {
+  width: 60%;
+  height: 200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  position: relative;
+}
+
+.user-info img {
+  width:  150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: -20px;
+  background-position: center center;
+  display: block;
+  object-fit: cover;
+  position: absolute;
+  left: 270px;
+}
+
+/* 吹き出し本体 - 枠線付きの吹き出し */
+.balloon2{
+  margin: 0 auto;
+  width: 60%;
+  position: relative;
+  padding: 20px;
+  background-color: #EEEEEE;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+}
+
+table.profile-table th {
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  background: #3f3f3f;
+  color: #ffffff;
+}
+table.profile-table td {
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.profile-table {
+  margin: 0 auto;
 }

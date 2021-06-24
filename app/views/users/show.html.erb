@@ -1,13 +1,81 @@
 <% provide(:title, @user.name) %>
-<div>
-    <div class="user_info">
-        <div class="profile-avatar-img">
-          <% if @user.avatar? %>
-        　　<%= image_tag @user.avatar.url %>
-          <% end %>
+<div class="container">
+    <div class="user-info">
+        <div class="profile-img">
+            <% if @user.avatar? %>
+        　  　<%= image_tag @user.avatar.url %>
+            <% end %>
         </div>
+            <p>🌸ひとこと🌸</p>
+            <div class="balloon2">
+              <%= @user.self_pr %>
+            </div>
+    </div>
+        <table class="profile-table">
+          <thead>
+            <tr>
+              <th colspan="2">公開プロフィール</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>ニックネーム</td>
+              <td><%= @user.nickname %></td>
+            </td>
+            <tr>
+              <td>年齢</td>
+              <td><%= @user.age %></td>
+            </tr>
+            <tr>
+              <td>出身地</td>
+              <td><%= @user.from %></td>
+            </td>
+            <tr>
+              <td>職業</td>
+              <td><%= @user.job %></td>
+            </tr>
+            <tr>
+              <td>収入</td>
+              <td><%= @user.income %></td>
+            </td>
+            <tr>
+              <td>学歴</td>
+              <td><%= @user.ed %></td>
+            </tr>
+            <tr>
+              <td>休日</td>
+              <td><%= @user.holiday %></td>
+            </td>
+            <tr>
+              <td>身長</td>
+              <td><%= @user.height %></td>
+            </tr>
+            <tr>
+              <td>体型</td>
+              <td><%= @user.body %></td>
+            </td>
+            <tr>
+              <td>血液型</td>
+              <td><%= @user.blood %></td>
+            </tr>
+            <tr>
+              <td>性格</td>
+              <td><%= @user.personality %></td>
+            </td>
+            <tr>
+              <td>お酒</td>
+              <td><%= @user.alcohol %></td>
+            </tr>
+            <tr>
+              <td>タバコ</td>
+              <td><%= @user.tabacco %></td>
+            </td>
+            
+          </tbody>
+          
+        </table>
         
-        <%= @user.name %>
         <% if current_user != @user %>
           <%= link_to "チャット", room_path(@room) %>
         <% end %>
@@ -15,5 +83,4 @@
           | <%= link_to "削除", @user, method: :delete,
                                         data: { confirm: "You sure?" } %>
         <% end %>
-    </div>
 </div>
