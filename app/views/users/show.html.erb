@@ -3,10 +3,23 @@
     <div class="user-info">
         <div class="profile-img">
             <% if @user.avatar? %>
-        　  　<%= image_tag @user.avatar.url %>
+        　  　　<%= image_tag @user.avatar.url %>
+            <% else %>
+              <%= image_tag "/assets/default.jpg" %>
             <% end %>
         </div>
-            <p>🌸ひとこと🌸</p>
+            <span class="tyattosakujo">
+               <% if current_user != @user %>
+                 <%= link_to "チャット", room_path(@room) %>
+               <% end %>
+               <% if current_user.admin? && !current_user?(@user) %>
+                  | <%= link_to "削除", @user, method: :delete,
+                                        data: { confirm: "You sure?" } %>
+               <% end %>
+            </span>
+            
+            <span class="hitokoto">🌸ひとこと🌸</span>
+            
             <div class="balloon2">
               <%= @user.self_pr %>
             </div>
@@ -76,11 +89,4 @@
           
         </table>
         
-        <% if current_user != @user %>
-          <%= link_to "チャット", room_path(@room) %>
-        <% end %>
-        <% if current_user.admin? && !current_user?(@user) %>
-          | <%= link_to "削除", @user, method: :delete,
-                                        data: { confirm: "You sure?" } %>
-        <% end %>
 </div>
