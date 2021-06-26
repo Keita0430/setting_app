@@ -1,13 +1,20 @@
 <% provide(:title, "チャット") %>
+
+<div class="container">
 <% if @rooms.any? %>
   <h1>チャット相手</h1>
 
-  <ul class="rooms">
+  <ul class="rooms-index">
   <% @rooms.each do |room| %>
     <li>
     <% room.users.each do |pair| %>
       <% if pair.id != current_user.id %>
-          <h3><%= link_to pair.name, room_path(room) %></h3> 
+        <% if pair.avatar? %>
+        　  　　<%= image_tag pair.avatar.url %>
+            <% else %>
+              <%= image_tag "/assets/default.jpg" %>
+        <% end %>
+        <h3><%= link_to pair.name, room_path(room) %></h3> 
       <% end %>
     <% end %>
     </li>
@@ -15,3 +22,4 @@
   </ul>
 
 <% end %>
+</div>

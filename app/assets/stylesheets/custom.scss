@@ -173,7 +173,7 @@ input {
 
 /* Rooms index */
 
-.rooms {
+.rooms-index {
   list-style: none;
   margin: 0;
   li {
@@ -181,8 +181,22 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+  h3 {
+    display: inline-block;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    position:absolute;
+	　bottom: 0;
+  }
 }
 
+.rooms-index img {
+  width:  50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+}
 
 /************************************
 ** チャットの吹き出し
@@ -555,10 +569,10 @@ input {
 }
 
 .post-avatar-img img {
-  width:  50px;       /* ※縦横を同値に */
-  height: 50px;       /* ※縦横を同値に */
-  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-  background-position: center center;  /* 横長画像の左上を基準に表示 */
+  width:  50px;
+  height: 50px;
+  border-radius: 50%;
+  background-position: center center;
   display: inline-block;
   object-fit: cover;
 }
