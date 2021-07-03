@@ -7,19 +7,12 @@ class UsersController < ApplicationController
   def show
     # before_actionを通すことで、showアクションとビューで@current_user変数が使える。
     @user = User.find(params[:id])
-    rooms= @current_user.user_rooms.pluck(:room_id)
-    user_rooms = UserRoom.find_by(user_id: @user.id, room_id: rooms)
+    rooms= @current_user.user_rooms.pluck(:room_id) #ログインユーザーが持つチャットルームに関連付けられた中間テーブルのroom_idカラムを配列として取得
+    user_rooms = UserRoom.find_by(user_id: @user.id, room_id: rooms) #
 
-    unless user_rooms.nil?
+    unless user_rooms.nil? #中間テーブルが存在する場合(ログインユーザーがチャットルームを持っている場合)
       @room = user_rooms.room
-      if @room.messages.any?
-        @messages = @room.messages.includes(:user).order(:id).last(100)
-      end
-    else
-      @room = Room.new
-      @room.save
-      UserRoom.create(user_id: @current_user.id, room_id: @room.id)
-      UserRoom.create(user_id: @user.id, room_id: @room.id)
+      
     end
   end
     

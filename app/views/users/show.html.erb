@@ -1,6 +1,7 @@
 <% provide(:title, @user.name) %>
 <div class="container">
     <div class="user-info">
+        <h2><%= @user.name %></h2>
         <div class="profile-img">
             <% if @user.avatar? %>
         　  　　<%= image_tag @user.avatar.url %>
@@ -10,8 +11,13 @@
         </div>
             <span class="tyattosakujo">
                <% if current_user != @user %>
-                 <%= link_to "チャット", room_path(@room) %>
+                 <% if @room %>
+                   <%= link_to "チャット", room_path(@room) %>
+                 <% else %>
+                   <%= link_to "チャットを始める", "/rooms/new/#{@user.id}" %>
+                 <% end %>
                <% end %>
+               
                <% if current_user.admin? && !current_user?(@user) %>
                   | <%= link_to "削除", @user, method: :delete,
                                         data: { confirm: "You sure?" } %>

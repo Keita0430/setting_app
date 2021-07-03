@@ -23,7 +23,9 @@ Rails.application.routes.draw do
     resources :posts, only: [:new, :create]
   end
   
-  resources :rooms, only: [:index, :show] do
+  get 'rooms/new/:id', controller: 'rooms', action: 'new'
+  
+  resources :rooms, only: [:index, :create, :show] do
    resources :messages, only: [:create]
   end
   

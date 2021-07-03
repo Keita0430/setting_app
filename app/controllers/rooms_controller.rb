@@ -8,6 +8,25 @@ class RoomsController < ApplicationController
     # @user_room = UserRoom.where(user_id: @current_user.id)
   end
   
+  def new
+    @room = Room.new
+    @user = User.find(params[:id])
+  end
+  
+  def create
+    @user = User.find(params[:user_id])
+    @room = Room.new
+    
+    if @room.save!
+      UserRoom.create!(user_id: @current_user.id, room_id: @room.id)
+      UserRoom.create!(user_id: @user.id, room_id: @room.id)
+      flash[:success] =  "チャットを開始します"
+      redirect_to @room
+    end
+    # @rooom = Room.new
+    # @room.save
+  end
+  
   def show
     @room = Room.find(params[:id])
     if UserRoom.where(user_id: @current_user.id, room_id: @room.id).present?
