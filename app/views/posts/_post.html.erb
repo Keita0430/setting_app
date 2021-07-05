@@ -2,10 +2,17 @@
     <div class="post-user-info">
         <div class="post-avatar-img">
           <% if @post.user.avatar? %>
-        　　<%= image_tag @post.user.avatar.url %>
+        　  　　<%= image_tag @post.user.avatar.url %>
+          <% else %>
+              <%= image_tag "/assets/default.jpg" %>
           <% end %>
         </div>
-        <%= link_to @post.user.name, user_path(@post.user) %>
+        <span>
+           <%= link_to @post.user.name, user_path(@post.user) %>
+        </span>
+        <span>
+           <%= @post.user.age %>
+        </span>
 　　</div>
 　　
 　　<table class="postable">

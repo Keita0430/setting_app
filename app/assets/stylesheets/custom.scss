@@ -512,15 +512,24 @@ input {
   height: 80px;
   background-color: #FFC107;
   margin: 0 auto;
+  span {
+    padding-right: 10px;
+    padding-left: 10px;
+    
+  }
 }
 
-.post-avatar-img img {
-  width:  50px;
-  height: 50px;
-  border-radius: 50%;
-  background-position: center center;
+.post-avatar-img {
   display: inline-block;
-  object-fit: cover;
+  padding-top: 15px;
+  img {
+    width:  50px;
+    height: 50px;
+    border-radius: 50%;
+    // background-position: center center;
+    display: inline-block;
+    object-fit: cover;
+  }
 }
 
 table.postable {
