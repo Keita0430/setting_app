@@ -1,0 +1,12 @@
+<div class="message">
+  <p class="message-image">
+    <% if message.user.avatar? %>
+    　<%= image_tag message.user.avatar.url %>
+    <% else %>
+      <%= image_tag "/assets/default.jpg" %>
+    <% end %>
+  </p>
+  <p class="message-name"><%= message.user.nickname %> :</p>
+  <span class="message-time"><%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %></span>
+  <%= simple_format(h message.content) %>
+</div>

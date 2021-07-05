@@ -202,88 +202,32 @@ input {
 ** チャットの吹き出し
 ************************************/
 
-#message-container {
-  padding: 20px 10px;
-  max-width: 768px;
-  margin: 15px auto;
-  text-align: right;
-  font-size: 14px;
-  background: white;
+.message {
+   max-width: 768px;
+   margin: 0 auto;
+   border-bottom: 2px solid #eee;
+   padding-top: 10px;
+   p {
+     display: inline-block;
+     max-width: 768px;
+   }
+   img {
+     width:  50px;
+     height: 50px;
+     border-radius: 50%;
+     display: inline-block;
+     object-fit: cover;
+   }
 }
 
-.fukidasi {
-  width: 100%;
-  margin: 10px 0;
-  overflow: hidden;
-}
-.fukidasi .faceicon {
-  float: left;
-  margin-right: -50px;
-  width: 40px;
-}
-.fukidasi .faceicon img{
-  width: 90%;
-  height: auto;
-  border-radius: 50%;
-}
-.fukidasi .chatting {
-  width: 100%;
-  text-align: left;
-}
-.says {
-  display: inline-block;
-  position: relative;
-  margin: 0 0 0 50px;
-  padding: 10px;
-  max-width: 250px;
-  // border-radius: 12px;
-  background: #edf1ee;
-}
-.says:after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 3px;
-  left: -19px;
-  border: 8px solid transparent;
-  border-right: 18px solid #edf1ee;
-  -webkit-transform: rotate(35deg);
-  transform: rotate(35deg);
-}
-.says p {
-  margin: 0;
-  padding: 0;
+.message-time {
+  float: right;
 }
 
-/*以下、③右側の緑コメント*/
-.mycommet {
-  display: inline-block;
-  position: relative;
-  margin: 0 10px 0 0;
-  padding: 8px;
-  max-width: 250px;
-}
-.mycomment p:after {
-  content: "";
-  // display: inline-block;
-  position: absolute;
-  // top: px;
-  // left: -19px;
-  // border: 8px solid transparent;
-  // border-left: 18px solid #edf1ee;
-  // -webkit-transform: rotate(35deg);
-  // transform: rotate(35deg);
-}
-.mycomment p {
-  display: inline-block;
-  max-width: 250px;
-  // border-radius: 12px;
-  background: #F0FFF0;
-  font-size: 15px;
-}
+// .message-image {
+//   display: inline-block;
+// }
 
-
-// メッセージ投稿フォーム
 .message-footer {
   max-width: 768px;
   padding: 1rem;
@@ -297,6 +241,8 @@ input {
   border-color: #6c757d;
   cursor: auto;
 }
+
+
 
 /* 自分で追加 */
 .setting-image {
@@ -693,6 +639,10 @@ table.optional th {
   padding-bottom: 15px;
 }
 
+.user-info h2 {
+  margin: 0;
+}
+
 span.tyattosakujo {
   font-family: sans-serif;
   font-size: 15px;
@@ -714,8 +664,7 @@ span.hitokoto {
   width: 60%;
   height: 200px;
   margin: 0 auto;
-  padding-top: 30px;
-  // position: relative;
+  padding-top: 15px;
 }
 
 .user-info img {
