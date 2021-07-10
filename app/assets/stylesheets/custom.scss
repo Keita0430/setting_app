@@ -243,39 +243,6 @@ input {
 }
 
 
-
-/* 自分で追加 */
-.setting-image {
-  text-align: center;
-}
-
-.option-container{
-  display: flex;
-}
-
-.option-container > a{
-  margin: 10px;
-  width: 25%;
-  height: 300px;
-  border-radius: 50%;
-}
-
-.option-1{
-  background: #FFFFCC;
-}
-
-.option-2{
-  background: #CCFFFF;
-}
-
-.option-3{
-  background: #CCFFCC;
-}
-
-.option-4{
-  background: #FFCCCC;
-}
-
 // ホームのカルーセル
 
 %transition_all_03s {
@@ -601,9 +568,11 @@ table.postable tbody th {
 
 .service-about-box {
   background-color: white;
-  width: 40%;
+  // width: 40%;
+  max-width: 549px;
+  height: 400px;
   margin: 0 auto;
-  padding-bottom: 50px;
+  // padding-bottom: 50px;
   border-radius: 10px;
   box-shadow: 0 0 8px gray;
 }
@@ -613,15 +582,22 @@ table.postable tbody th {
 }
 
 .service-about-image {
-  margin: 0 auto;
+  width: 100%;
+  height: 250px;
+  // margin: 0 auto;
+  background-image: url('BoardsSelectOptionImage.jpg');
+  background-size: cover;
 }
 
-.service-about-image > img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  border-radius: 10px 10px 0 0;
-}
+// .service-about-image > img {
+//   // display: block;
+//   // width: 100%;
+//   max-width: 550px;
+//   max-height: 204px;
+//   margin: 0 auto;
+//   object-fit: cover;
+//   border-radius: 10px 10px 0 0;
+// }
 
 .service-about-image > h3 {
   text-align: center;
@@ -723,3 +699,39 @@ table.profile-table td {
 .profile-table {
   margin: 0 auto;
 }
+
+/************************************
+** お相手を探す
+************************************/
+.service-about-image1 {
+  width: 100%;
+  height: 250px;
+  // margin: 0 auto;
+  background-image: url('BoardsSelectOptionImage.jpg');
+  background-size: cover;
+}
+
+.service-about-image2 {
+  width: 100%;
+  height: 250px;
+  // margin: 0 auto;
+  background-image: url('BoardsSelectOptionImage2.jpg');
+  background-size: cover;
+}
+
+.service-about-image3 {
+  width: 100%;
+  height: 250px;
+  // margin: 0 auto;
+  background-image: url('BoardsSelectOptionImage3.jpg');
+  background-size: cover;
+}
+
+.service-about-image4 {
+  width: 100%;
+  height: 250px;
+  // margin: 0 auto;
+  background-image: url('BoardsSelectOptionImage4.jpg');
+  background-size: cover;
+}
+
