@@ -577,31 +577,33 @@ table.postable tbody th {
   box-shadow: 0 0 8px gray;
 }
 
+.service-about-box > h3 {
+  text-align: center;
+}
+
 .service-about-box > p {
   text-align: center;
 }
 
-.service-about-image {
+.service-about-image5 {
   width: 100%;
   height: 250px;
   // margin: 0 auto;
-  background-image: url('BoardsSelectOptionImage.jpg');
+  background-image: url('home2.jpg');
   background-size: cover;
 }
 
-// .service-about-image > img {
-//   // display: block;
-//   // width: 100%;
-//   max-width: 550px;
-//   max-height: 204px;
-//   margin: 0 auto;
-//   object-fit: cover;
-//   border-radius: 10px 10px 0 0;
-// }
-
-.service-about-image > h3 {
-  text-align: center;
+.service-about-image6 {
+  width: 100%;
+  height: 250px;
+  // margin: 0 auto;
+  background-image: url('home3.jpg');
+  background-size: cover;
 }
+
+// .service-about-image > h3 {
+//   text-align: center;
+// }
 
 table.optional {
   margin: 0 auto;
