@@ -8,7 +8,7 @@
 <ul class="boards">
   <% @boards1.each do |board| %>
     <li>
-      <%= link_to board.district_name, board_path(board) %> <%= board.id %>
+      <%= link_to board.whatvswhat, board_path(board) %> <%= board.id %>
     </li>
   <% end %>
 </ul>

@@ -43,17 +43,17 @@ class BoardsController < ApplicationController
     # .paginate(page: params[:page])
   end
   
-  # def destroy
-  #   @board = Board.find(params[:id])
-  #   @board.destroy
-  #   flash[:success] = "Board deleted"
-  #   redirect_to request.referrer || root_url
-  # end
+  def destroy
+    @board = Board.find(params[:id])
+    @board.destroy
+    flash[:success] = "Board deleted"
+    redirect_to request.referrer || root_url
+  end
   
   private
 
     def board_params
-      params.require(:board).permit(:district_name)
+      params.require(:board).permit(:whatvswhat, :number)
     end
     
     
