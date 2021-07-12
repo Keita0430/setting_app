@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :users
   get 'users/:id/edit/:name', controller: 'users', action: 'edit'
   
-  get 'boards/option/:name', controller: 'boards', action: 'index'
+  # get 'boards/option/:name', controller: 'boards', action: 'index'
   
   resources :boards, only: [:index, :show, :new, :create] do
     resources :posts, only: [:new, :create]

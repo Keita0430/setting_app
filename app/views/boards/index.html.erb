@@ -1,14 +1,32 @@
 <% provide(:title, 'お相手を探す') %>
-<h1>1:1でお会いする相手を探そう！</h1>
+<h1>～お相手を探す～</h1>
 
 <% if @current_user.admin? %>
   <li><%= link_to "掲示板の追加", new_board_path %></li>
 <% end %>
 
-<ul class="boards">
-  <% @boards1.each do |board| %>
-    <li>
-      <%= link_to board.district_name, board_path(board) %> <%= board.id %>
-    </li>
-  <% end %>
-</ul>
+<div class="service-block">
+			<ul class="service-about">
+				
+                    <% @boards.each do |board| %>
+                    
+                          <li>
+				            <div class="service-about-box">
+				               <div class="service-about-image<%= board.id %>">
+							   </div>
+						       <h3><span class="service-about-number"><%= board.number %></span><%= board.whatvswhat %>でお相手を探せる</span></h3>
+						
+					            <table class="optional">
+							       <tr>
+								      <th colspan="2">お相手を探す</th>
+							       </tr>
+							       <tr>
+								      <td colspan="2"><%= link_to board.whatvswhat, board_path(board), class: "service-about-button button border" %></th>
+							       </tr>
+						        </table>
+					        </div>
+				          </li>
+                    <% end %>
+                    
+            </ul>
+</div>
