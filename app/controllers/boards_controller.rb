@@ -4,22 +4,6 @@ class BoardsController < ApplicationController
   
   def index
     @boards = Board.all
-    # @boards1 = @boards.find(1)
-    # @boards2 = @boards.find(2)
-    # @boards3 = @boards.find(3)
-    # @boards4 = @boards.find(4)
-    
-    # if request.fullpath == "/boards/option/select"
-    #   render "boards/option"
-    # elsif request.path == boards_path
-    #   render "boards/index"
-    # elsif request.fullpath == "/boards/option/index2"
-    #   render "boards/index2"
-    # elsif request.fullpath == "/boards/option/index3"
-    #   render "boards/index3"
-    # else
-    #   render "boards/index4"
-    # end
   end
   
   def new
@@ -29,7 +13,7 @@ class BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
     if @board.save
-      flash[:success] = "新たな地区の掲示板を追加しました！"
+      flash[:success] = "新たな掲示板を追加しました！"
       redirect_to boards_path
     else
       render 'new'
