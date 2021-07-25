@@ -1,0 +1,47 @@
+version: '3.5'
+services:
+  db:
+    image: mariadb:10.3
+    ports: 
+      - '3306:3306'
+    env_file: production.env
+    volumes: 
+      - mysql-data:/var/lib/mysql
+
+  unicorn:
+    build:
+      context: .
+      dockerfile: "Pro.Dockerfile"
+    environment:
+      - RAILS_ENV=production        
+    command: bundle exec unicorn -p 3000 -c /my_app/unicorn.conf.rb -E production 
+    tty: true 
+    stdin_open: true
+    depends_on:
+      - db 
+    ports:
+      - "3000:3000"
+    env_file: production.env
+    volumes:
+      - .:/my_app:cached 
+      - tmp-data:/my_app/tmp/sockets
+      - public-data:/my_app/public
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    restart: always
+    volumes:
+      - tmp-data:/my_app/tmp/sockets
+      - public-data:/my_app/public
+    depends_on:
+      - unicorn
+
+volumes:
+  public-data:
+  tmp-data:
+  mysql-data:
+    driver: local
