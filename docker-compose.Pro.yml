@@ -3,7 +3,7 @@ services:
   db:
     image: mariadb:10.3
     ports: 
-      - '3306:3306'
+      - '3310:3310'
     env_file: production.env
     volumes: 
       - mysql-data:/var/lib/mysql
