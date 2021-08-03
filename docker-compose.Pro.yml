@@ -5,6 +5,8 @@ services:
     ports: 
       - '3306:3306'
     env_file: production.env
+        environment:
+           MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     volumes: 
       - mysql-data:/var/lib/mysql
 
