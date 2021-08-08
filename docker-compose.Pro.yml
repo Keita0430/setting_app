@@ -2,10 +2,6 @@ version: '3.5'
 services:
   db:
     image: mariadb:10.3
-    environment:
-        MARIADB_PORT_PASSWORD:
-        MARISDB_DATABASE: root
-        MARISDB_ALLOW_EMPTY_PASSWORD: "yes"
     ports: 
       - '3306:3306'
     env_file: production.env

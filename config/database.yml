@@ -36,6 +36,6 @@ production:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: <%= ENV.fetch("DB_DATABASENAME") { 'my_app' } %>
   username: <%= ENV.fetch("DB_USERNAME") { 'root' } %>
-  password: <%= ENV.fetch("DB_PASSWORD") { 'password' } %>
+  password: <%= ENV.fetch("DB_PASSWORD") { 'Keita0180' } %>
   timeout: 5000
   host: <%= ENV.fetch("DB_HOST") { 'db' } %>
