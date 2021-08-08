@@ -25,7 +25,7 @@ services:
     volumes:
       - .:/setting_app:cached 
       - tmp-data:/setting_app/tmp/sockets
-      - public-data:/my_app/public
+      - public-data:/setting_app/public
 
   nginx:
     build:
