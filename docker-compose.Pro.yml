@@ -26,10 +26,14 @@ services:
       - .:/setting_app:cached 
       - tmp-data:/setting_app/tmp/sockets
 <<<<<<< HEAD
+<<<<<<< HEAD
       - public-data:/setting_app/public
 =======
       - public-data:/my_app/public
 >>>>>>> ac850714d3430dd498ae273cbb4813e24162e68e
+=======
+      - public-data:/setting_app/public
+>>>>>>> 1c7675a6d9908fd8d326a9e8473f4b1a0d469595
 
   nginx:
     build:
