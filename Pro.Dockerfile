@@ -10,4 +10,4 @@ COPY Gemfile ./Gemfile
 COPY Gemfile.lock ./Gemfile.lock
 RUN gem install bundler -v 1.17.2
 RUN bundle install
-COPY . /my_app
+COPY . /setting_app
