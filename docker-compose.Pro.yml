@@ -3,7 +3,7 @@ services:
   db:
     image: mariadb:10.3
     environment: 
-      MYSQL_ROOT_PASSWORD: YES
+      MYSQL_ROOT_PASSWORD: "yes"
     ports: 
       - '3306:3306'
     env_file: production.env
