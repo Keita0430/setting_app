@@ -4,6 +4,10 @@ services:
     image: mariadb:10.3
     environment: 
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: 
+      # MYSQL_DATABASE: api_development
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Keita0180
     ports: 
       - '3306:3306'
     env_file: production.env
