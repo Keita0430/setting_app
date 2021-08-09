@@ -27,6 +27,6 @@ production:
   database: <%= ENV.fetch("DB_DATABASENAME") { 'setting_app' } %>
   username: <%= ENV.fetch("DB_USERNAME") { 'root' } %>
   password: <%= ENV.fetch("DB_PASSWORD") { 'Keita0180' } %>
-  mysql_allow_empty_password: <%= ENV.fetch("DB_ALLOW_EMPTY_PASSWORD") { 'yes' } %>
+  # mysql_allow_empty_password: <%= ENV.fetch("DB_ALLOW_EMPTY_PASSWORD") { 'yes' } %>
   timeout: 5000
   host: <%= ENV.fetch("DB_HOST") { 'db' } %>
