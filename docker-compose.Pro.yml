@@ -4,7 +4,7 @@ services:
     image: mariadb:10.3
     environment: 
       MYSQL_ROOT_PASSWORD: "Keita0180"
-      # MYSQL_DATABASE: api_development
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_USER: root
       # MYSQL_PASSWORD: Keita0180
     ports: 
