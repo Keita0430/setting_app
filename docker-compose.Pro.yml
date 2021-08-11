@@ -5,7 +5,7 @@ services:
     environment: 
       MYSQL_ROOT_PASSWORD: "Keita0180"
       # MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_USER: root
+      # MYSQL_USER: root
       # MYSQL_PASSWORD: Keita0180
     ports: 
       - '3306:3306'
