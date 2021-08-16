@@ -25,7 +25,7 @@ production:
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: <%= ENV.fetch("DB_DATABASENAME") { 'setting_app' } %>
-  # username: <%= ENV.fetch("DB_USERNAME") { 'root' } %>
+  username: <%= ENV.fetch("DB_USERNAME") { 'root' } %>
   # password: <%= ENV.fetch("DB_PASSWORD") { 'Keita0180' } %>
   # mysql_allow_empty_password: <%= ENV.fetch("DB_ALLOW_EMPTY_PASSWORD") { 'yes' } %>
   timeout: 5000
