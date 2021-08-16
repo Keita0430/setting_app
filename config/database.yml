@@ -26,7 +26,7 @@ production:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: <%= ENV.fetch("DB_DATABASENAME") { 'setting_app' } %>
   username: <%= ENV.fetch("DB_USERNAME") { 'root' } %>
-  # password: <%= ENV.fetch("DB_PASSWORD") { 'Keita0180' } %>
+  password: <%= ENV.fetch("DB_PASSWORD") { 'password' } %>
   # mysql_allow_empty_password: <%= ENV.fetch("DB_ALLOW_EMPTY_PASSWORD") { 'yes' } %>
   timeout: 5000
   host: <%= ENV.fetch("DB_HOST") { 'db' } %>
