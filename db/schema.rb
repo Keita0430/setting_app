@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_11_180014) do
+ActiveRecord::Schema.define(version: 2021_08_28_154639) do
 
   create_table "articles", force: :cascade do |t|
     t.text "content"
@@ -73,7 +73,6 @@ ActiveRecord::Schema.define(version: 2021_07_11_180014) do
     t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin", default: false
-    t.integer "gender"
     t.string "avatar"
     t.string "nickname"
     t.string "age"
