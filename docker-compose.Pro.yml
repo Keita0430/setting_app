@@ -4,8 +4,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: setting_app
-      MYSQL_USER: root
-      # MYSQL_PASSWORD: password
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: password
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     image: mariadb:10.3
     ports: 
