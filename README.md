@@ -1,24 +1,17 @@
-# README
+<h1>タイトル</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h1>デモ動画</h1>
 
-Things you may want to cover:
+<h1>URL</h1>
 
-* Ruby version
+<h1>使用技術</h1>
 
-* System dependencies
+<h1>機能一覧</h1>
+<ul>
+ <li>チャット機能</li>
+ <li>パスワード/個人情報/プロフィール変更機能</li>
+ <li>掲示板機能</li>
+ <li>お誘い/お役立ち情報投稿機能</li>
+</ul>
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h1>テスト</h1>
