@@ -589,7 +589,8 @@ table.postable tbody th {
   width: 100%;
   height: 250px;
   // margin: 0 auto;
-  background-image: url('home2.jpg');
+  background-image: url(<%= asset_path('home2.jpg') %>);
+  // background-image: url('home2.jpg');
   background-size: cover;
 }
 
@@ -597,6 +598,7 @@ table.postable tbody th {
   width: 100%;
   height: 250px;
   // margin: 0 auto;
+  background-image: url(<%= asset_path('home3.jpg') %>);
   background-image: url('home3.jpg');
   background-size: cover;
 }
