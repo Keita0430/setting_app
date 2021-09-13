@@ -13,7 +13,8 @@ class PostsController < ApplicationController
     
     if @post.save
       flash[:success] = "新規投稿をしました"
-      redirect_back(fallback_location: root_path)
+      redirect_to board_path(@board)
+      # redirect_back(fallback_location: root_path)
     else
       redirect_back(fallback_location: root_path)
     end
