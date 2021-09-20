@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_28_154639) do
+ActiveRecord::Schema.define(version: 2021_09_20_154320) do
 
   create_table "articles", force: :cascade do |t|
     t.text "content"
@@ -49,6 +49,9 @@ ActiveRecord::Schema.define(version: 2021_08_28_154639) do
     t.string "conditions"
     t.string "ng"
     t.string "self_pr"
+    t.integer "friend2"
+    t.integer "friend3"
+    t.integer "friend4"
     t.index ["board_id"], name: "index_posts_on_board_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
