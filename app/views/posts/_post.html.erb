@@ -8,7 +8,7 @@
           <% end %>
         </div>
         <span>
-           <%= link_to @post.user.name, user_path(@post.user) %>
+           <%= link_to @post.user.nickname, user_path(@post.user) %>
         </span>
         <span>
            <%= @post.user.age %>
