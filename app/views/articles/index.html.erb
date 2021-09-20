@@ -9,7 +9,7 @@
 　　</div>
     <% @articles.each do |article| %>
       <div class="col-lg-4">
-        <div class="card"> <%= image_tag article.avatar.url %>
+        <div class="card"> <%= image_tag "/assets/article.png" %>
           <h4><%= article.title %></h4>
           <p><%= article.description %></p> <%= link_to "詳細へ", article_path(article), class: "blue-button"%>
         </div>
