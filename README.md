@@ -1,7 +1,7 @@
 <h1>タイトル</h1>
 
 <h1>デモ動画</h1>
-https://media.giphy.com/media/bVKRdLX8Q61bfJNFOh/giphy.gif?cid=790b7611d72104a7814ba73f03262df49679372f1b4aed56&rid=giphy.gif&ct=g
+https://github.com/Keita0430/setting_app/issues/1#issue-1001357746
 
 <h1>URL</h1>
 
