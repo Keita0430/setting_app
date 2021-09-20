@@ -1,7 +1,7 @@
 <h1>タイトル</h1>
 
 <h1>デモ動画</h1>
-https://github.com/Keita0430/setting_app/issues/1#issue-1001357746
+https://user-images.githubusercontent.com/79146469/134069358-49e35f63-8ba7-4efd-ac4e-8945edb4f54c.gif
 
 <h1>URL</h1>
 
