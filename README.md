@@ -2,7 +2,7 @@
 
 
 <h1>デモ動画</h1>
- ![giphy 1](https://user-images.githubusercontent.com/79146469/134069358-49e35f63-8ba7-4efd-ac4e-8945edb4f54c.gif)
+ ![giphy 1](https://user-images.githubusercontent.com/79146469/134125078-43abf0fc-edfe-4f47-b2bb-804a12881d9f.gif)
 <p>アプリの部分的なデモ動画になります</p>
 <h1>URL</h1>
 https://limitless-caverns-89212.herokuapp.com/
